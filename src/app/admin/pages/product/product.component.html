@@ -1,0 +1,7 @@
+<app-command-bar (actionEmitter) = "add()" (deleteAllActionEmitter) = "deleteAll()"></app-command-bar>
+
+<div *ngFor = "let product of products">
+    <app-product-item [product] = "product" (deleteActionEmitter) = "delete($event)" (editActionEmitter) = "edit($event)"></app-product-item>
+
+</div>
+

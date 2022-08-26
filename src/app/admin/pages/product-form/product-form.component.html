@@ -1,0 +1,29 @@
+<p>product-form works!</p>
+
+<form [formGroup] = "productForm" (ngSubmit) = "submit()">
+    <div>
+        <input type="text" placeholder="Name" formControlName = "name">
+    </div>
+    <div>
+        <input type="text" placeholder="Brand" formControlName = "brand">
+    </div>
+    <div>
+        <input type="text" placeholder="Gender" formControlName = "gender">
+    </div>
+    <div>
+        <input type="text" placeholder="Category" formControlName = "category">
+    </div>
+    <div>
+        <input type="number" placeholder="Price" formControlName = "price">
+    </div>
+    <div>
+        <input type="number" placeholder="Inventory" formControlName = "items_left">
+    </div>
+    <div>
+        <input type="text" placeholder="Image URL" formControlName = "imageURL">
+    </div>
+    <div>
+        <button (click) = "submit()">Submit</button>
+    </div>
+   
+</form>

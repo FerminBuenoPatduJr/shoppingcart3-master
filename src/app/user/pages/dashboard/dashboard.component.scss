@@ -1,0 +1,18 @@
+.instance {
+    display: inline-block;
+    // width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    // width: 150px;
+    height: 200px;
+    padding: 5px;
+}
+
+.text {
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }

@@ -1,0 +1,31 @@
+
+<ng-container>
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>{{pendingorder?.name}}</td>
+                            <td><img style="width: 120px;" src={{pendingorder?.imageURL}} alt=""></td>
+                            <th style="width: 12%;">{{pendingorder?.price}}</th>
+                            <td style="width: 12%;">{{pendingorder?.quantity}}</td>
+                            <td style="width: 12%;">{{pendingorder?.total}}</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>

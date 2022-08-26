@@ -1,0 +1,6 @@
+Go Group4!
+<<<<<<< HEAD
+Fighting again!!!
+=======
+Hi group 4!!-ej roxas
+>>>>>>> master

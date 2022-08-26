@@ -1,0 +1,39 @@
+<!--MAIN CART PAGE-->
+<ng-container>
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <!-- *ngFor="let item of products; let i = index" -->
+                            <td>{{cartorder?.name}}</td>
+                            <td><img style="width: 120px;" src={{cartorder?.imageURL}} alt=""></td>
+                            <th style="width: 12%;">{{cartorder?.price}}</th>
+                            <td style="width: 12%;">{{cartorder?.quantity}}</td>
+                            <td style="width: 12%;">{{cartorder?.total}}</td>
+                            <td>
+                                <button (click)="deleteOrder()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                                <!-- (click)="removeItem(item)" -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<!--END OF MAIN CART PAGE-->

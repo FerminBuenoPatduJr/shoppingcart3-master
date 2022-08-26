@@ -1,0 +1,32 @@
+<h1>Checkout Page</h1>
+
+<ng-container *ngIf="cartOrders.length !=0">
+    <div *ngFor = "let item of cartOrders">
+        <app-checkout-item [checkout] = "item">
+        <!-- (deleteorderEmitter) = "executeDeleteOrder(item)"> -->
+    </app-checkout-item>
+    </div>
+    
+    <button mat-flat-button >Cancel All</button>
+    <!-- (click)="emptycart()" -->
+    <button mat-flat-button routerLink="/user">Shop More</button>
+    <button mat-flat-button (click)="pendingOrders(cartOrders)">BUY NOW</button>
+    <!-- (click)="checkout(product)" -->
+    <strong>Grand Total : ${{grandTotal}}</strong>
+    </ng-container>
+
+<!--IF CHECKOUT IS EMPTY-->
+<ng-container *ngIf="cartOrders.length == 0">
+    <!-- *ngIf="products.length ==0" -->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Checkout Page</h5>
+        </div>
+        <div class="center">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.cFdYue38FjfacdSvCfBiKwHaDm&pid=Api&P=0" alt="">
+            <h4>Bummer, no items to checkout!</h4>
+            <h5>Add to cart</h5>
+            <button routerLink="/user">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

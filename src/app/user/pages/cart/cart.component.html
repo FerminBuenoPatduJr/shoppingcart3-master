@@ -1,0 +1,30 @@
+<h1>Cart Page</h1>
+
+<ng-container *ngIf="product.length !=0">
+    <div *ngFor = "let item of product">
+        <app-cart-item [cartorder] = "item"
+        (deleteorderEmitter) = "executeDeleteOrder(item)">
+    </app-cart-item>
+    </div>
+    
+    <button mat-flat-button (click)="emptycart()">Empty Cart</button>
+    <button mat-flat-button routerLink="/user" >Shop More</button>
+    <button mat-flat-button (click)="checkout(product)">Checkout</button>
+    <strong>Grand Total : ${{grandTotal}}</strong>
+    </ng-container>
+
+<!--IF CART IS EMPTY-->
+<ng-container *ngIf="product.length == 0">
+    <!-- *ngIf="products.length ==0" -->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.cFdYue38FjfacdSvCfBiKwHaDm&pid=Api&P=0" alt="">
+            <h4>Bummer, your cart is empty!</h4>
+            <h5>Add item to it now</h5>
+            <button routerLink="/user">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

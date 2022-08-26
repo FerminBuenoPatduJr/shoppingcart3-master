@@ -1,0 +1,29 @@
+<h1>PENDING ORDERS PAGE</h1>
+
+<ng-container *ngIf="checkoutOrders.length !=0">
+    <div *ngFor = "let item of checkoutOrders">
+        <app-pending-item [pendingorder] = "item">
+        <!-- (deleteorderEmitter) = "executeDeleteOrder(item)"> -->
+    </app-pending-item>
+    </div>
+    <strong>Grand Total : ${{grandTotal}}</strong>
+    <h1>Thank you for Shopping at Seven</h1>
+    <button mat-flat-button routerLink="/user">Shop More</button>
+    <!-- (click)="checkout(product)" -->
+</ng-container>
+
+<!--IF CHECKOUT IS EMPTY-->
+<ng-container *ngIf="checkoutOrders.length == 0">
+    <!-- *ngIf="products.length ==0" -->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Pending Orders</h5>
+        </div>
+        <div class="center">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.cFdYue38FjfacdSvCfBiKwHaDm&pid=Api&P=0" alt="">
+            <h4>Bummer, no pending orders!</h4>
+            <h5>Add to cart</h5>
+            <button routerLink="/user">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

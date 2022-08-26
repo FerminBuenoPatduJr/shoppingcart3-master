@@ -1,0 +1,95 @@
+<mat-card>
+    <mat-card-content>
+      <div class="header">
+        <p>Sign Into Your Account </p>
+      </div>
+    <form [formGroup] = "loginForm" (ngSubmit) = "login()">
+        <div class="emailInput">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                formControlName="email"
+                matInput
+                placeholder="Enter email address" required
+              />
+              <mat-error *ngIf="!loginForm.controls['email'].valid">
+                  Email is required
+                </mat-error>
+                <mat-error *ngIf="loginForm.controls['email'].errors?.['email']">
+                  Invalid Email Format
+                </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+          <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>
+              {{hide ? 'visibility_off' : 'visibility'}}
+          </mat-icon>
+      </button>
+      <mat-error *ngIf="!loginForm.controls['password'].valid">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+        <span>
+          <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+        </span>
+      </div>
+   
+    <button type = "submit" class = "btns" mat-flat-button color="primary">Login</button>
+    <p>Not a member? <a routerLink = "/signup">Sign up now</a></p>
+</form>
+</mat-card-content>
+</mat-card>
+
+
+
+<!-- <mat-card>
+    <mat-card-content>
+      <div class="header">
+        <p>Sign Into Your Account </p>
+      </div>
+      <form name="loginForm" [formGroup]="loginForm"> -->
+        <!-- <div class="emailInput">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Enter email address" required
+            />
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+                Email is required
+              </mat-error>
+              <mat-error *ngIf="loginForm.controls['email'].errors?.['email']">
+                Invalid Email Format
+              </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </button>
+        <mat-error *ngIf="!loginForm.controls['password'].valid">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+          <span>
+            <a class="text-link" class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+          </span>
+        </div>
+        <br>
+        <button class = "btns" (click)="onLogin()" mat-flat-button color="primary">Login</button>
+        <button class="btns" (click)="goToRegister()" mat-flat-button color="primary">Register</button>
+      </form>
+    </mat-card-content>
+  </mat-card> -->

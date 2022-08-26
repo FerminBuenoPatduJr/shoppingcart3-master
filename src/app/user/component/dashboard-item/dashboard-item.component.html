@@ -1,0 +1,31 @@
+<mat-card class="card fill image">
+  <img mat-card-image src={{product?.imageURL}} height = "250" >
+  <div class = "container__text">
+  <mat-card-title>{{product?.name}}</mat-card-title>
+      <mat-card-subtitle>Category: {{product?.category}}</mat-card-subtitle>
+  
+      <mat-card-content>
+        <h4>Brand: {{product?.brand}}</h4>
+        <!-- <h3>Price: {{product?.price}}</h3> -->
+        <p><i>Gender:</i> {{product?.gender}}<br>
+        <i>Items Left:</i> {{product?.items_left}}</p>
+      </mat-card-content>
+  </div>
+  <mat-card-actions>
+  <button (click)= addtocart() class ="delbutton" mat-button>
+    <!-- (click)= addtocart(data) -->
+  <a>Add to Cart</a></button>
+  </mat-card-actions>
+</mat-card>
+<router-outlet></router-outlet>
+
+
+<!-- <div class="product">
+<span class="product__price">{{product?.price}}</span>
+<img class="product__image" src={{product?.imageURL}}>
+<h3 class="product__title">{{product?.name}}</h3>
+<hr />
+<p>{{product?.brand}}</p>
+<p>{{product?.gender}}</p>
+<a href="#" class="product__btn btn">Buy Now</a>
+</div> -->

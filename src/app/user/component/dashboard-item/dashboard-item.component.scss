@@ -1,0 +1,39 @@
+.card {
+  width: clamp(15rem, calc(15rem + 2vw), 17rem);
+  height: 30rem;
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  // background: #ECE9E6;
+  // background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 0%;
+
+}
+
+.actionbutton {
+    border-radius: 2px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 4px 2px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+  }
+
+.actionbutton:hover {
+  background-color: #e7e7e7;
+  color:black;
+}
+
+.fill-image {
+  object-fit: cover;
+}
+
+img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.5);
+}

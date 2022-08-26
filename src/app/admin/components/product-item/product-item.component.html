@@ -1,0 +1,16 @@
+<p>product-item works!</p>
+
+
+<div>
+    <h1>{{product?.name}}</h1>
+    <h3>{{product?.brand}}</h3>
+    <h3>{{product?.gender}}</h3>
+    <h3>{{product?.price}}</h3>
+    <h3>Items left : {{product?.items_left}}</h3>
+    <img src={{product?.imageURL}} alt="">
+
+    <div>
+        <button (click) = "edit()">Edit</button>
+        <button (click) = "delete()" >Delete</button>
+    </div>
+</div>
